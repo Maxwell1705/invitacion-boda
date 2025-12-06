@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Maximiliano & Isis</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <h1>Maximiliano & Isis</h1>
+    <p class="subtitle">¡Nos casamos!</p>
+</header>
+
+<section>
+    <h2>Fecha</h2>
+    <p>29 de diciembre</p>
+</section>
+
+<section class="event-box">
+    <h2>Ceremonia Religiosa</h2>
+    <p><strong>4:00 PM</strong></p>
+    <a class="map-btn" href="https://www.google.com/maps/place/Iglesia+Sant%C3%ADsima+Trinidad/" target="_blank">
+        Ver ubicación
+    </a>
+</section>
+
+<section class="event-box">
+    <h2>Ceremonia Civil</h2>
+    <p><strong>6:00 PM</strong></p>
+    <a class="map-btn" href="https://www.google.com/maps/place/Quinta+Alejandrina/" target="_blank">
+        Ver ubicación
+    </a>
+</section>
+
+<section id="rsvp">
+    <h2>Confirmación de Asistencia</h2>
+    <p>Por favor confirma tu asistencia llenando el siguiente formulario:</p>
+
+    <form action="https://formsubmit.co/2020030190@upsin.edu.mx" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="gracias.html">
+
+        <input type="text" name="Nombre" placeholder="Tu nombre" required>
+        <select name="Asistencia" required>
+            <option value="">¿Asistirás?</option>
+            <option value="Sí">Sí asistiré</option>
+            <option value="No">No podré asistir</option>
+        </select>
+        <textarea name="Mensaje" rows="3" placeholder="Mensaje opcional"></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</section>
+
+<footer>
+    Con cariño, Maximiliano & Isis
+</footer>
+
+</body>
+</html>
