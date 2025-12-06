@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    color: #444;
+}
+header {
+    background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 3px solid #d4af37;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin: 0;
+    color: #d4af37;
+}
+.subtitle {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #666;
+}
+section {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+.event-box {
+    border: 2px solid #d4af37;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+a.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+a.map-btn:hover {
+    background-color: #d4af37;
+    color: white;
+}
+#rsvp {
+    background-color: #fafafa;
+    padding: 40px 20px;
+    border-top: 3px solid #d4af37;
+    border-bottom: 3px solid #d4af37;
+}
+form {
+    max-width: 500px;
+    margin: auto;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+button {
+    background-color: #d4af37;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    opacity: 0.9;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #888;
+}
+.gracias {
+    max-width: 700px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px 20px;
+}
+.gracias h1 {
+    font-size: 48px;
+    color: #d4af37;
+}
+.gracias p {
+    font-size: 20px;
+    margin: 15px 0;
+}
