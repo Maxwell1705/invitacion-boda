@@ -19,91 +19,50 @@
     <p>29 de diciembre</p>
     <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador</title>
-
+    <title>Contador Regresivo</title>
     <style>
-        .container {
-            background-color: rgb(120, 138, 111);
-            padding: 20px;
+        body {
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 0 10px;
-        }
-
-        .digits {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(193, 225, 197);
-            color: black;
-            font-weight: bold;
-            font-size: 2.3rem;
-            border-radius: 5px;
-            width: 3.2rem;
-            height: 5rem;
-            margin: 0 2px;
-        }
-
-        .label {
-            margin-top: 10px;
+            height: 100vh;
+            background: #111;
+            color: #fff;
             text-align: center;
-            font-size: 0.8rem;
-            color: white;
         }
-
-        .digit-group {
-            display: flex;
+        #countdown {
+            font-size: 2rem;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
+<div id="countdown">Cargando contador...</div>
 
-    <!-- DÍAS -->
-    <div class="box">
-        <div class="digit-group">
-            <div class="digits">25</div>
-            <div class="digits">3</div>
-        </div>
-        <div class="label">Días</div>
-    </div>
+<script>
+    // Fecha objetivo: 29 diciembre 2025 a las 18:00
+    const targetDate = new Date("December 29, 2025 18:00:00").getTime();
 
-    <!-- HORAS -->
-    <div class="box">
-        <div class="digit-group">
-            <div class="digits">2</div>
-            <div class="digits">0</div>
-        </div>
-        <div class="label">Horas</div>
-    </div>
+    const timer = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
 
-    <!-- MINUTOS -->
-    <div class="box">
-        <div class="digit-group">
-            <div class="digits">3</div>
-            <div class="digits">8</div>
-        </div>
-        <div class="label">Minutos</div>
-    </div>
+        if (distance <= 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "¡Llegó el momento!";
+            return;
+        }
 
-    <!-- SEGUNDOS -->
-    <div class="box">
-        <div class="digit-group">
-            <div class="digits">03</div>
-        </div>
-        <div class="label">Segundos</div>
-    </div>
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-</div>
+        document.getElementById("countdown").innerHTML =
+            `Faltan ${days} días, ${hours} horas, ${minutes} minutos y ${seconds} segundos`;
+    }, 1000);
+</script>
 
 </body>
 </section>
