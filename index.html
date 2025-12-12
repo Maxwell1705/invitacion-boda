@@ -17,6 +17,95 @@
 <section>
     <h2>Fecha</h2>
     <p>29 de diciembre</p>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+
+    <style>
+        .container {
+            background-color: rgb(120, 138, 111);
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+        }
+
+        .digits {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(193, 225, 197);
+            color: black;
+            font-weight: bold;
+            font-size: 2.3rem;
+            border-radius: 5px;
+            width: 3.2rem;
+            height: 5rem;
+            margin: 0 2px;
+        }
+
+        .label {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: white;
+        }
+
+        .digit-group {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- DÍAS -->
+    <div class="box">
+        <div class="digit-group">
+            <div class="digits">25</div>
+            <div class="digits">3</div>
+        </div>
+        <div class="label">Días</div>
+    </div>
+
+    <!-- HORAS -->
+    <div class="box">
+        <div class="digit-group">
+            <div class="digits">2</div>
+            <div class="digits">0</div>
+        </div>
+        <div class="label">Horas</div>
+    </div>
+
+    <!-- MINUTOS -->
+    <div class="box">
+        <div class="digit-group">
+            <div class="digits">3</div>
+            <div class="digits">8</div>
+        </div>
+        <div class="label">Minutos</div>
+    </div>
+
+    <!-- SEGUNDOS -->
+    <div class="box">
+        <div class="digit-group">
+            <div class="digits">03</div>
+        </div>
+        <div class="label">Segundos</div>
+    </div>
+
+</div>
+
+</body>
 </section>
 
 <section class="event-box">
